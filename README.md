@@ -2,10 +2,6 @@
 
 Coursework 2 in F28HS "Hardware-Software Interface" on Systems Programming in C and ARM Assembler
 
-The [CW specification is here](http://www.macs.hw.ac.uk/~hwloidl/Courses/F28HS/Coursework_F28HS_CW2_2024.pdf)
-
-Use Canvas groups (People -> Groups) to **sign-up as a pair** for this pair project.
-
 Links:
 - You can use any machine with an installation of the `gcc` C compiler for running the C code of the game logic
 - Template for the C program: [master-mind.c](master-mind.c)
@@ -20,20 +16,6 @@ This folder contains the following CW2 specification template files for the sour
                       this should be implemented in inline Assembler; 
 - `testm.c`       ... a testing function to test C vs Assembler implementations of the matching function
 - `test.sh`       ... a script for unit testing the matching function, using the -u option of the main prg
-
-## Gitlab usage
-
-**Fork** and **Clone** this gitlab repo to get started on the coursework.
-
-Complete the functions in `master-mind.c` and in `lcdBinary.c`. Initially, you can implement these as C
-functions. However, for the final implementation, the low-level functions for controlling LED, button, and
-LCD display should be implemented in inline Assembler (in `lcdBinary.c`). Note that the **matching function**,
-for calculating the number of exact and approximate matches also needs to be implemented in ARM Assembler.
-The file `mm-matches.s` contains a template this Assembler code.
-
-You can test basic functionality by using the `testm.c` C function and the `test.sh` shell script (see below).
-
-**Push** to the repo and ask questions in the comments box to get help.
 
 ## Building and running the application
 
@@ -57,8 +39,6 @@ calls the ARM Assembler code (in `mm-matches.s`) for the matching function.
 For controlling the external devices of LED, LCD and button use inline Assembler code, as discussed in
 the matching lecture in the course.
 
-The final version of the code should be pushed to this repo, and also submitted through Canvas, together with the report and video.
-
 A test script is available to do unit-testing of the matching function. Run it like this from the command line
 > sh ./test.sh
 
@@ -66,8 +46,6 @@ To test whether all tests have been successful you can do
 > echo $?
 
 which should print `0`.
-
-If you picked up the `.gitlab-ci.yml` file in this repo, this test will be done automatically when uploading the file and you will get either a Pass or Fail in the CI section of the gitlab-student server.
 
 ## Unit testing
 
